@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <nav class="navbar nav-edit">
+        <h4 class=" logo">
+            Budget App
+        </h4>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-xs-12 budget">
+                <h1 class="text-center text-white mt-2">
+                    Enter Budget
+                </h1>
+                <div class=" flex-center">
+                    <div class="flex-container">
+
+                        <div class="row data">
+                            <div class="col-2">
+                                <select class="custom-select" id="typeInput">
+                                                <option value="add">+</option>
+                                                <option value="dec">-</option>
+                                              </select>
+                            </div>
+                            <div class="col-5">
+                                <div class="input-group">
+                                    <input type="text" id="descriptionInput" class="form-control" placeholder="Enter Description">
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="input-group mb-3">
+                                    <input type="number" id="amountInput" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                </div>
+                            </div>
+                            <div class="col-1">
+                                <button id="enterBtn" class="btn btn-primary float-left btn-sm btn-round"><i class="fa fa-check" aria-hidden="true"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-12 text-white">
+
+                                <div class="budget__title">
+                                    Available Budget in <span class="budget__title--month"> Month </span>:
+                                </div>
+
+                                <div class="budget__value" id="main_budget"></div>
+
+                                <div class="budget__income clearfix">
+                                    <div class="budget__income--text">Income</div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="budget__income--value" id="main_budget_income"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="budget__expenses clearfix">
+                                    <div class="budget__income--text">Expenses</div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="budget__income--value" id="main_budget_expense"></div>
+                                        </div>
+                                        <div class="col-6 float-right">
+                                            <div class="budget__income--percentage" id="main_percentage"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6  col-xs-12  display">
+                <h1 class="text-center text-white mt-2">
+                    Income and Expenses
+                </h1>
+                <div class="flex-center-table mt-5">
+                    <div class="row" id="itemTable">
+                        <div class="col-12">
+                            <table class="table text-white">
+                                <thead>
+                                    <tr>
+                                        <h4 class="text-white">Income</h4>
+                                    </tr>
+                                </thead>
+                                <tbody class="add">
+                                    <tr>
+                                        <td>
+                                            <h5>Description</h5>
+                                        </td>
+                                        <td>
+                                            <h5 class="text-center">Amount</h5>
+                                        </td>
+                                        <td>
+                                            <h5 class="float-right">Delete Item</h5>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-12">
+                            <table class="table text-white">
+                                <thead>
+                                    <tr>
+                                        <h4 class="text-white">Expenses</h4>
+                                    </tr>
+                                </thead>
+                                <tbody class="dec">
+                                    <tr>
+                                        <tr>
+                                            <td>
+                                                <h5>Description</h5>
+                                            </td>
+                                            <td>
+                                                <h5 class="text-center">Amount</h5>
+                                            </td>
+                                            <td>
+                                                <h5 class="float-right">Delete Item</h5>
+                                            </td>
+                                        </tr>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--<script src="js/bootstrap.min.js"></script>-->
+    <script src="app/app.js" type=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.nav-edit {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+}
+
+.logo {
+    font-weight: 600;
+    font-family: 'Shrikhand', cursive;
+}
+
+.budget {
+    background-color: rgba(0, 150, 136, .7);
+    height: 95vh;
+    font-family: 'Raleway', sans-serif;
+}
+
+.display {
+    background-color: rgba(244, 67, 54, .7);
+    height: auto;
+    font-family: 'Raleway', sans-serif;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+
+.flex-center-table {
+    display: flex;
+    justify-content: center;
+}
+
+.budget__title {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.budget__value {
+    font-weight: 300;
+    font-size: 46px;
+    text-align: center;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.budget__income--text {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.budget__income--value {
+    font-size: 25px;
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.budget__income--percentage {
+    font-size: 25px;
+    text-align: right;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.btn-round {
+    border-radius: 100%!important
+}
