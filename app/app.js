@@ -414,5 +414,5 @@ const controller = (function(UIcon, budgetCon) {
 
 })(UIcontroller, budgetController);
 
-
+//Initialize State of the App
 controller.init();
